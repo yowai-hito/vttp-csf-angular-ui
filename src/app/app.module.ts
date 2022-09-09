@@ -21,6 +21,9 @@ import { GiphySearchComponent } from './pages/giphy-search/giphy-search.componen
 import { GiphyService } from './services/giphy.service';
 import { GiphySearchFormComponent } from './components/forms/giphy-search-form/giphy-search-form.component';
 import { GiphySearchResultComponent } from './components/interfaces/giphy-search-result/giphy-search-result.component';
+import { RegisterFormComponent } from './components/forms/register-form/register-form.component';
+import { RegisterService } from './services/register.service';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,9 @@ import { GiphySearchResultComponent } from './components/interfaces/giphy-search
     OrderIdNameComponent,
     GiphySearchComponent,
     GiphySearchFormComponent,
-    GiphySearchResultComponent
+    GiphySearchResultComponent,
+    RegisterFormComponent,
+    RegisterPageComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,8 @@ import { GiphySearchResultComponent } from './components/interfaces/giphy-search
   ],
   providers: [
     CartService,
-    GiphyService
+    GiphyService,
+    RegisterService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,5 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
-import { Injectable, Inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Subject } from "rxjs";
 @Injectable()
 export class GiphyService {
@@ -32,5 +32,4 @@ export class GiphyService {
         this.giphyParams.next(data)
     }
   }
-
 }

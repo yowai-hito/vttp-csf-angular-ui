@@ -6,6 +6,7 @@ import { NumberUiComponent } from './components/number-ui/number-ui.component';
 import { OrderManageComponent } from './pages/order-manage/order-manage.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { GiphySearchComponent } from './pages/giphy-search/giphy-search.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 const routes: Routes = [
   { path : 'number-ui',
@@ -36,6 +37,11 @@ const routes: Routes = [
     title : 'Giphy Search',
     component: GiphySearchComponent
   },
+  {
+    path: 'registerPage',
+    title: 'Registration',
+    component: RegisterPageComponent
+  }
 ];
 
 @NgModule({
