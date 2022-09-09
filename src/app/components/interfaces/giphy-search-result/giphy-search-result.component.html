@@ -1,0 +1,12 @@
+<table>
+    <caption> Giphy Results </caption>
+
+        <tr>
+            <th>picture</th>
+            <th>delete</th>
+        </tr>
+        <tr *ngFor="let result of giphyResults; let i = index">
+            <td><img [src] = "result.images.fixed_height_small.url" alt = "tbd"></td>
+            <td (click)="deleteRow(i)">X</td>
+        </tr>
+</table>

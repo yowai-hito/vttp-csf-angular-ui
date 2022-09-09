@@ -1,0 +1,19 @@
+<table>
+    <caption> Order History </caption>
+        <thead>
+            <tr>
+                <th>Order Id</th>
+                <th>Name</th>
+                <th>Number of items</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of ordersInfo; let i = index">
+                <td [innerText]="item.id"></td>
+                <td [innerText]="item.userName"></td>
+                <td [innerText]="item.userItems.length" style = "text-align: center;"></td>
+                <td (click)="updateRow(i)">Update</td>
+            </tr>
+        </tbody>
+</table>

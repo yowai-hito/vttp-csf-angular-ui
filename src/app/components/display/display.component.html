@@ -1,0 +1,6 @@
+<div class="div">
+    <button class="buttons" (click) = "prev()"> previous </button>
+        <p [ngClass]="{'hover-number': hover, 'p': true}" 
+        (mouseenter)="hoverNumber()" (mouseleave)="unhoverNumber()" (click) = "save()"> {{ current }} </p>
+    <button class="buttons" (click) = "next()"> next </button>
+</div>

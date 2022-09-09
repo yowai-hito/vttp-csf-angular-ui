@@ -1,0 +1,20 @@
+<form [formGroup] = 'searchForm' (ngSubmit)="processForm()">
+    <table class="center">
+        <caption>Giphy Search</caption>
+        <th>Search</th>
+            <tr><input formControlName="searchQuery" type="text"></tr>
+        <th>Offset</th>
+            <tr>
+                <select formControlName="searchOffset">
+                    <option *ngFor="let offset of offsetOptions" value = {{offset}} > {{offset}}</option> 
+                </select>
+            </tr>
+        <th>Rating</th>
+            <tr>
+                <select formControlName="searchRating">
+                    <option *ngFor="let rating of ratingOptions" value = {{rating}} > {{rating}}</option> 
+                </select>
+            </tr>
+        <button type="submit" [disabled]="this.searchForm.invalid">Search</button>
+    </table>
+</form>

@@ -1,0 +1,20 @@
+<table>
+    <caption> Shopping Cart </caption>
+
+        <tr>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            <th>Item Quantity</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor="let item of cart; let i = index">
+            <td [innerText]="item.itemName"></td>
+            <td [innerText]="item.itemPrice"></td>
+            <td [innerText]="item.itemQuantity"></td>
+            <td (click)="deleteRow(i)">X</td>
+        </tr>
+        <tr>
+            <td colspan="2">Total</td>
+            <td colspan="2" [innerText]="total"></td>
+        </tr>
+</table>

@@ -1,0 +1,16 @@
+<form [formGroup] = 'item' (ngSubmit)="processForm()">
+    <table>
+        <caption>Register</caption>
+        <th>Name:</th>
+            <tr><input formControlName="itemName" type = 'text'></tr>
+        <th>Unit Price:</th>
+            <tr><input formControlName="itemPrice" type="number" min="0.00" max="10000.00" step="0.01"></tr>
+        <th>Quantity:</th>
+            <tr>
+                <select formControlName="itemQuantity">
+                    <option *ngFor="let number of quantityOptions" value = {{number}} > {{number}}</option> 
+                </select>
+            </tr>
+        <button type="submit" >{{ submitType }}</button>
+    </table>
+</form>

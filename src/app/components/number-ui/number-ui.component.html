@@ -1,0 +1,12 @@
+<h1 class="align-center">Saved numbers</h1>
+
+<div>
+  <table class="center" >
+    <tr class="align-center" *ngFor="let number of numbers; let i = index">
+      <td (click)="delete(i)">{{ number }}</td>
+    </tr>
+  </table>
+</div>
+
+<app-display class="numbers" (savedNumber)="addNumber($event)" ></app-display>
+

@@ -1,0 +1,10 @@
+<form [formGroup] = 'form' (ngSubmit)="processForm()">
+    <table>
+        <caption>Register</caption>
+        <th>Userame:</th>
+            <tr><input formControlName="username" type = 'text'></tr>
+        <th>Password:</th>
+            <tr><input formControlName="password" type="password"></tr>
+        <button type="submit" [disabled]="form.invalid">Submit</button>
+    </table>
+</form>

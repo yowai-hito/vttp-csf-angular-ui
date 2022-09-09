@@ -1,0 +1,36 @@
+<form [formGroup] = 'form' (ngSubmit)="processForm()">
+    <table>
+        <caption>Register</caption>
+        <th>Userame:</th>
+            <tr><input formControlName="userName" type='text'></tr>
+        <th>Mobile:</th>
+            <tr><input formControlName="userMobile" type="text"></tr>
+        <button type="submit" [disabled]="this.form.invalid">Submit</button>
+    </table>
+
+    <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>
+              <button type="button" style="margin-left: 10px;" (click)="addItem()">Add</button>
+            </th>
+  
+          </tr>
+        </thead>
+        <tbody formArrayName="userItems">
+          <tr *ngFor="let itemForm of items.controls; let i = index;" [formGroup]="itemForm">
+            <td>
+              <input type="text" value = '' formControlName="itemName">
+            </td>
+            <td>
+              <input type="number" formControlName="itemQuantity">
+            </td>
+            <td>
+              <button type="button" (click)="removeItem(i)"> X </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</form>
