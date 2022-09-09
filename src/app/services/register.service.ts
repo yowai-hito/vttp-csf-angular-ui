@@ -19,7 +19,7 @@ export class RegisterService {
         'email': email
     }
 
-    return this.http.post('http://localhost:8080/csf/assignments/register', requestBody, { headers: headers } )
+    return this.http.post('https://vttp-csf-backend.herokuapp.com/csf/assignments/register', requestBody, { headers: headers } )
   }
 
 }
