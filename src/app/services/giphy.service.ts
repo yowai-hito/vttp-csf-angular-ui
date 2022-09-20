@@ -15,7 +15,7 @@ export class GiphyService {
     const headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-      }
+    }
     
     const params = new HttpParams()
       .set('api_key', '6gRlSGNn6VwpR9GXRclTKhRyyiZY0LPT')

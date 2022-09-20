@@ -1,0 +1,7 @@
+<nav>
+  <ul>
+    <li *ngFor="let book of bookList">
+      <a [routerLink]="['/goodreads/book', book.book_id]">{{ book.title }}</a>
+    </li>
+  </ul>
+</nav>

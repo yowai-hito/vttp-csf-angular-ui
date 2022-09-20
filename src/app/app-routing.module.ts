@@ -7,15 +7,26 @@ import { OrderManageComponent } from './pages/order-manage/order-manage.componen
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { GiphySearchComponent } from './pages/giphy-search/giphy-search.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { WebcamComponent } from './components/webcam/webcam.component';
 
-const routes: Routes = [
+const goodReadsAssignment: Routes = [
+  { path : 'goodreads',
+    title: 'Good Reads',
+    loadChildren: () => import(`./pages/goodreads/goodreads.module`).then(m => m.GoodreadsModule)
+  }
+]
+
+const WebcamAssignment: Routes = [
+  { path: 'webcam', 
+    title: 'Webcam', 
+    component: WebcamComponent
+  }
+]
+
+const assignmentRoutes: Routes = [
   { path : 'number-ui',
     title: 'Number 30',
     component : NumberUiComponent,
-  },
-  { path : '',
-    title: 'Landing Page',
-    component: LandingComponent,
   },
   {
     path : 'firstForm',
@@ -41,7 +52,18 @@ const routes: Routes = [
     path: 'registerPage',
     title: 'Registration',
     component: RegisterPageComponent
-  }
+  },
+  ...goodReadsAssignment,
+  ...WebcamAssignment
+]
+
+const routes: Routes = [
+  
+  { path : '',
+    title: 'Landing Page',
+    component: LandingComponent,
+  },
+  ...assignmentRoutes
 ];
 
 @NgModule({

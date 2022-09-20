@@ -24,6 +24,15 @@ import { GiphySearchResultComponent } from './components/interfaces/giphy-search
 import { RegisterFormComponent } from './components/forms/register-form/register-form.component';
 import { RegisterService } from './services/register.service';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { GoodreadsComponent } from './pages/goodreads/goodreads.component';
+import { BookListComponent } from './components/goodreads/book-list/book-list.component';
+import { BookDetailsComponent } from './components/goodreads/book-details/book-details.component';
+import { GoodreadsRoutingModule } from './pages/goodreads/goodreads-routing.module';
+import { GoodreadsService } from './services/goodreads.service';
+import { GoodreadsLandingComponent } from './pages/goodreads-landing/goodreads-landing.component';
+import { WebcamComponent } from './components/webcam/webcam.component';
+import {WebcamModule} from 'ngx-webcam';
+import { WebcamService } from './services/webcam.service';
 
 @NgModule({
   declarations: [
@@ -42,19 +51,27 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
     GiphySearchFormComponent,
     GiphySearchResultComponent,
     RegisterFormComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    GoodreadsComponent,
+    BookListComponent,
+    BookDetailsComponent,
+    GoodreadsLandingComponent,
+    WebcamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    WebcamModule
   ],
   providers: [
     CartService,
     GiphyService,
-    RegisterService
+    RegisterService,
+    GoodreadsService,
+    WebcamService
   ],
   bootstrap: [AppComponent]
 })
