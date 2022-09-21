@@ -19,6 +19,6 @@ export class WebcamService {
     }
     console.log(reqBody);
     //Database not created yet.
-    // return this.http.post('http://localhost:8080/csf/assignments/webcam/save', reqBody, { headers: this.headers })
+    // return this.http.post( environment.backend_hostname + '/csf/assignments/webcam/save', reqBody, { headers: this.headers })
   }
 }

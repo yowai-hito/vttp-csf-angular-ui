@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
-import { Subject } from "rxjs";
+import { environment } from "src/environments/environment";
+
 @Injectable()
 export class RegisterService {
 
@@ -19,7 +20,7 @@ export class RegisterService {
         'email': email
     }
 
-    return this.http.post('http://localhost:8080/csf/assignments/register', requestBody, { headers: headers } )
+    return this.http.post( environment.backend_hostname + '/csf/assignments/register', requestBody, { headers: headers } )
   }
 
 }

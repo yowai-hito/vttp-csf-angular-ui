@@ -33,6 +33,9 @@ import { GoodreadsLandingComponent } from './pages/goodreads-landing/goodreads-l
 import { WebcamComponent } from './components/webcam/webcam.component';
 import {WebcamModule} from 'ngx-webcam';
 import { WebcamService } from './services/webcam.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { DeleteComponent } from './components/test/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,8 @@ import { WebcamService } from './services/webcam.service';
     BookListComponent,
     BookDetailsComponent,
     GoodreadsLandingComponent,
-    WebcamComponent
+    WebcamComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +68,9 @@ import { WebcamService } from './services/webcam.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    WebcamModule
+    WebcamModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     CartService,
