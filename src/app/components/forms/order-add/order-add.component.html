@@ -20,7 +20,7 @@
           </tr>
         </thead>
         <tbody formArrayName="userItems">
-          <tr *ngFor="let itemForm of items.controls; let i = index;" [formGroup]="itemForm">
+          <tr *ngFor="let itemForm of formArrayControls; let i = index;" [formGroup]="itemForm">
             <td>
               <input type="text" value = '' formControlName="itemName">
             </td>

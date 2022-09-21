@@ -33,6 +33,8 @@ import { GoodreadsLandingComponent } from './pages/goodreads-landing/goodreads-l
 import { WebcamComponent } from './components/webcam/webcam.component';
 import {WebcamModule} from 'ngx-webcam';
 import { WebcamService } from './services/webcam.service';
+import { MaterialsModule } from './materials.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import { WebcamService } from './services/webcam.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    WebcamModule
+    WebcamModule,
+    MaterialsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     CartService,

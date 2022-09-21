@@ -34,11 +34,15 @@ export class OrderAddComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-      this.updateSub$.unsubscribe
+      this.updateSub$.unsubscribe()
   }
 
+  public get formArrayControls() {
+    return (this.form.controls["userItems"] as FormArray).controls as FormGroup[];
+}
+
   addItem() {
-    const item = this.fb.group({
+    const item: FormGroup = this.fb.group({
       itemName: this.fb.control<string>('', [ Validators.required ]),
       itemQuantity: this.fb.control<number>(1, [ Validators.required  ])
     })

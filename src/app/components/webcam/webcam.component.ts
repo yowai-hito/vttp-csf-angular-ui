@@ -22,7 +22,7 @@ export class WebcamComponent implements OnInit {
   public errors: WebcamInitError[] = [];
 
   // mirror image options
-  public mirrorOptions: String = "never"
+  public mirrorOptions: string = "never"
 
   // latest snapshot
   public webcamImage!: WebcamImage;
@@ -78,7 +78,7 @@ export class WebcamComponent implements OnInit {
     return this.nextWebcam.asObservable();
   }
 
-  private postImageToDb(): void {
+  public postImageToDb(): void {
     const caption = (document.getElementById('imgCaption') as HTMLInputElement)!.value
     this.webcamService.postWebcamImage(this.webcamImage.imageAsDataUrl as String, caption)
   }
